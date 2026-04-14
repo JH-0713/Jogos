@@ -562,7 +562,7 @@ def n1():
   ░██      
   ░██      
   ░██      
-░██████    
+░██████
 '''
 
 def n2():
@@ -584,8 +584,8 @@ def n3():
   ░█████   
       ░██  
 ░██   ░██  
- ░██████          
-'''
+ ░██████ 
+ '''
 
 def n4():
     return '''             
@@ -663,145 +663,3 @@ def n0():
  ░██ ░██   
   ░████     
 '''
-
-text1 = "Flam1ngo"
-lista_comun = []
-def fazer_titulo(texto):
-    print(texto)
-    texto_novo = list(texto)
-    print(texto_novo)
-    for i in texto_novo:
-        if "A" in i:
-            lista_comun.append(A())
-        elif "B" in i:
-            lista_comun.append(B())
-        elif "C" in i:
-            lista_comun.append(C())
-        elif "D" in i:
-            lista_comun.append(D())
-        elif "E" in i:
-            lista_comun.append(E())
-        elif "F" in i:
-            lista_comun.append(F())
-        elif "G" in i:
-            lista_comun.append(G())
-        elif "H" in i:
-            lista_comun.append(H())
-        elif "I" in i:
-            lista_comun.append(I())
-        elif "J" in i:
-            lista_comun.append(J())
-        elif "K" in i:
-            lista_comun.append(K())
-        elif "L" in i:
-            lista_comun.append(L())
-        elif "M" in i:
-            lista_comun.append(M())
-        elif "N" in i:
-            lista_comun.append(N())
-        elif "O" in i:
-            lista_comun.append(O())
-        elif "P" in i:
-            lista_comun.append(P())
-        elif "Q" in i:
-            lista_comun.append(Q())
-        elif "R" in i:
-            lista_comun.append(R())
-        elif "S" in i:
-            lista_comun.append(S())
-        elif "T" in i:
-            lista_comun.append(T())
-        elif "U" in i:
-            lista_comun.append(U())
-        elif "V" in i:
-            lista_comun.append(V())
-        elif "W" in i:
-            lista_comun.append(W())
-        elif "X" in i:
-            lista_comun.append(X())
-        elif "Y" in i:
-            lista_comun.append(Y())
-        elif "Z" in i:
-            lista_comun.append(Z())
-
-
-        if "a" in i:
-            lista_comun.append(a())
-        elif "b" in i:
-            lista_comun.append(b())
-        elif "c" in i:
-            lista_comun.append(c())
-        elif "d" in i:
-            lista_comun.append(d())
-        elif "e" in i:
-            lista_comun.append(e())
-        elif "f" in i:
-            lista_comun.append(f())
-        elif "g" in i:
-            lista_comun.append(g())
-        elif "h" in i:
-            lista_comun.append(h())
-        elif "i" in i:
-            lista_comun.append(i())
-        elif "j" in i:
-            lista_comun.append(j())
-        elif "k" in i:
-            lista_comun.append(k())
-        elif "l" in i:
-            lista_comun.append(l())
-        elif "m" in i:
-            lista_comun.append(m())
-        elif "n" in i:
-            lista_comun.append(n())
-        elif "o" in i:
-            lista_comun.append(o())
-        elif "p" in i:
-            lista_comun.append(p())
-        elif "q" in i:
-            lista_comun.append(q())
-        elif "r" in i:
-            lista_comun.append(r())
-        elif "s" in i:
-            lista_comun.append(s())
-        elif "t" in i:
-            lista_comun.append(t())
-        elif "u" in i:
-            lista_comun.append(u())
-        elif "v" in i:
-            lista_comun.append(v())
-        elif "w" in i:
-            lista_comun.append(w())
-        elif "x" in i:
-            lista_comun.append(x())
-        elif "y" in i:
-            lista_comun.append(y())
-        elif "z" in i:
-            lista_comun.append(z())
-
-        if "1" in i:
-            lista_comun.append(n1())
-        elif "2" in i:
-            lista_comun.append(n2())
-        elif "3" in i:
-            lista_comun.append(n3())
-        elif "4" in i:
-            lista_comun.append(n4())
-        elif "5" in i:
-            lista_comun.append(n5())
-        elif "6" in i:
-            lista_comun.append(n6())
-        elif "7" in i:
-            lista_comun.append(n7())
-        elif "8" in i:
-            lista_comun.append(n8())
-        elif "9" in i:
-            lista_comun.append(n9())
-        elif "0" in i:
-            lista_comun.append(n0())
-
-    for i1 in lista_comun:
-        print(i1, end='')
-
-
-fazer_titulo("text1")
-
