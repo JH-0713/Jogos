@@ -75,7 +75,6 @@ def pedir_carta(e1):
         p_carta_1 = str(p_carta)
         lista_jp1.append(p_carta)
         lista_p1.append(p_carta_1)
-
     elif e1 == "C":
         c_carta = randint(1, 13)
         c_carta_1 = str(c_carta)

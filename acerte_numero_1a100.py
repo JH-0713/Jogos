@@ -1,0 +1,106 @@
+from random import randint
+from ferramentas.inputs import *
+from ferramentas.cor import *
+
+tentativas = 1
+
+def introduzir():
+    while True:
+        print("""
+           ░███                                      ░██                                ░███    ░██                                                           
+          ░██░██                                     ░██                                ░████   ░██                                                           
+         ░██  ░██   ░███████   ░███████  ░██░████ ░████████  ░███████      ░███████     ░██░██  ░██ ░██    ░██ ░█████████████   ░███████  ░██░████  ░███████  
+        ░█████████ ░██    ░██ ░██    ░██ ░███        ░██    ░██    ░██    ░██    ░██    ░██ ░██ ░██ ░██    ░██ ░██   ░██   ░██ ░██    ░██ ░███     ░██    ░██ 
+        ░██    ░██ ░██        ░█████████ ░██         ░██    ░█████████    ░██    ░██    ░██  ░██░██ ░██    ░██ ░██   ░██   ░██ ░█████████ ░██      ░██    ░██ 
+        ░██    ░██ ░██    ░██ ░██        ░██         ░██    ░██           ░██    ░██    ░██   ░████ ░██   ░███ ░██   ░██   ░██ ░██        ░██      ░██    ░██ 
+        ░██    ░██  ░███████   ░███████  ░██          ░████  ░███████      ░███████     ░██    ░███  ░█████░██ ░██   ░██   ░██  ░███████  ░██       ░███████  
+                                                                                                                                                          
+                                                                       ░██                                                                                
+                                                                       ░██                                                                                
+                                                                 ░████████  ░███████                                                                      
+                                                                ░██    ░██ ░██    ░██                                                                     
+                                                                ░██    ░██ ░█████████                                                                     
+                                                                ░██   ░███ ░██                                                                            
+                                                                 ░█████░██  ░███████                                                                      
+                                                                                                                                                          
+                                                   ░██                      ░██     ░████     ░████                                                       
+                                                 ░████                    ░████    ░██ ░██   ░██ ░██                                                      
+                                                   ░██       ░██████        ░██   ░██ ░████ ░██ ░████                                                     
+                                                   ░██            ░██       ░██   ░██░██░██ ░██░██░██                                                     
+                                                   ░██       ░███████       ░██   ░████ ░██ ░████ ░██                                                     
+                                                   ░██      ░██   ░██       ░██    ░██ ░██   ░██ ░██                                                      
+                                                 ░██████     ░█████░██    ░██████   ░████     ░████                                                       
+        """)
+        print('')
+        print('[1] Jogar')
+        print('[2] Sair')
+        print('')
+        ex1 = input_int("> ")
+        if ex1 == 1:
+            return True
+        elif ex1 == 2:
+            return False
+        else:
+            pass
+
+def espaco():
+    for i in range(35):
+        print('')
+
+def sortear():
+    return randint(1, 100)
+
+def continuar():
+    while True:
+        print("")
+        print("Deseja continuar? [S/N]")
+        print("")
+        ex1 = input_str("> ").upper()
+        print("")
+        if ex1 == "S" or ex1 == "SI" or ex1 == "SIM":
+            print("Ok Selecionando outro Numero...")
+            print('')
+            return True
+        elif ex1 == "N" or ex1 == "NA" or ex1 == "NÃ" or ex1 == "NAO" or  ex1 == "NÃO":
+            print('Saindo do Jogo...')
+            return False
+        else:
+            pass
+
+w1 = introduzir()
+n1 = sortear()
+while w1:
+    espaco()
+    print("")
+    print(f"Tentativas: {tentativas}")
+    print("")
+    print("Digite um Numero de 1 a 100:")
+    print("")
+    esc1 = input_int("> ")
+    print("")
+    if esc1 == n1 and tentativas == 1:
+        print('Parabens 🎉🥳')
+        print("Vc Acertou o Numero de Primeira!")
+        print('')
+        w1 = continuar()
+        n1 = sortear()
+        espaco()
+    elif esc1 == n1:
+        print('Vc Acertou o Numero!')
+        print('')
+        w1 = continuar()
+        n1 = sortear()
+        espaco()
+    elif esc1 > n1:
+        tentativas += 1
+        print(f'O numero é Menor que {esc1}')
+        print('')
+    elif esc1 < n1:
+        tentativas += 1
+        print(f'O numero é Maior que {esc1}')
+        print('')
+    else:
+        pass
+
+
+
