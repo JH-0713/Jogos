@@ -46,3 +46,9 @@ def negrito():
     return Style.BRIGHT
 def reset_all():
     return Style.RESET_ALL
+
+def continuar():
+    print(f'{negrito()}')
+    print(f'Clique em [{f_verde()}ENTER{f_reset()}] para continuar:')
+    input("> ")
+    print('')

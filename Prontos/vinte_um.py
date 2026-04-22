@@ -112,16 +112,13 @@ def ver_placar():
     print('')
     print(f'{f_azul()}Player{f_reset()}: {p_p1}')
     print(f'{f_verde()}CPU{f_reset()}: {p_c1}')
-    print('')
-    print('Clique em [ENTER] para continuar:')
-    input("> ")
-    print('')
+    continuar()
     espaco()
 
 i1 = introduzir()
 while i1:
     embaralhar()
-    print(f"")
+    print(f"{negrito()}")
     print("Escolha:")
     print("")
     print(f"[1] Pedir uma Carta")
@@ -157,9 +154,7 @@ while i1:
             print(f'{f_amarelo()}Empate{f_reset()}')
 
         lista_p1,lista_jp1,lista_c1,lista_jc1 = rezetar()
-        print('')
-        print('Clique em [ENTER] para continuar:')
-        input("> ")
+        continuar()
         print('')
         espaco()
 

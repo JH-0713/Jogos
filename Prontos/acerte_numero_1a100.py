@@ -71,8 +71,6 @@ w1 = introduzir()
 n1 = sortear()
 while w1:
     print(f"{negrito()}")
-    print(f"Tentativas: {tentativas}")
-    print("")
     print("Digite um Numero de 1 a 100:")
     print("")
     esc1 = input_int("> ")

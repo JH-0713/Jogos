@@ -65,9 +65,7 @@ def ver_placar():
     print("")
     print(f"{f_verde()}Vitorias{f_reset()}: {p_pw1}")
     print(f"{f_vermelho()}Derrotas{(f_reset())}: {p_pl1}")
-    print('')
-    print(f'Clique em {f_verde()}[ENTER]{f_reset()} para continuar:')
-    input("> ")
+    continuar()
     espaco()
 
 w1 = introduzir()
@@ -94,9 +92,7 @@ while w1:
             print("Coroa")
             print(f'{f_azul()}Player {f_vermelho()}Lose{f_reset()}')
             p_pl1 += 1
-        print('')
-        print(f'Clique em {f_verde()}[ENTER]{f_reset()} para continuar:')
-        input("> ")
+        continuar()
         espaco()
 
     elif esc1 == 2:
@@ -109,9 +105,7 @@ while w1:
             print("Cara")
             print(f'{f_azul()}Player {f_amarelo()}Wins{f_reset()}')
             p_pw1 += 1
-        print('')
-        print(f'Clique em {f_verde()}[ENTER]{f_reset()} para continuar:')
-        input("> ")
+        continuar()
         espaco()
 
     elif esc1 == 3:
