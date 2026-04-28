@@ -1,9 +1,8 @@
-p1 = 'Flamingo'
-print(p1)
+jogo_da_velha = [[1,2,3],[4,5,6],[7,8,9]]
 
-p1 = j1 = list(p1)
+# para acessar uma matriz é necessario dois for
+for i in jogo_da_velha:
+    for i1 in i:
+        print(i1,end=' ')
 
-for i in j1:
-    print(i,end=' ')
-print('')
-print(p1, j1)
+    print('\n')# pula uma linha
