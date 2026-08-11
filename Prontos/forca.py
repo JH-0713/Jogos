@@ -5,6 +5,11 @@ from ferramentas.cor import *
 # Contangem:
 c_e1 = 0
 verific = False
+ve_palavras = []
+v_a1 = []
+v_c1 = []
+v_p1 = []
+v_o1 = []
 
 # Listas:
 temas = ['Animal', 'Comida', 'Pais', 'Objeto']
@@ -21,7 +26,7 @@ p_animal = [
     "Garça", "Cisne", "Galo", "Galinha", "Peru", "Codorna", "Jacaré", "Crocodilo", "Lagarto",
     "Camaleão", "Iguana", "Cobra", "Salamandra", "Sapo", "Rã", "Perereca", "Peixe-palhaço",
     "Tilápia", "Salmão", "Atum", "Sardinha", "Bicho-preguiça", "Besouro", "Borboleta", "Mariposa",
-    "Formiga", "Abelha", "Vespa", "Gafanhoto"
+    "Formiga", "Abelha", "Vespa", "Gafanhoto","Axolote"
 ]
 
 p_comida = [
@@ -40,7 +45,7 @@ p_comida = [
     "Ameixa", "Pêssego", "Kiwi", "Maracujá", "Acerola", "Goiaba",
     "Chocolate", "Bala", "Chiclete", "Doce de leite", "Rapadura",
     "Canjica", "Arroz doce", "Mingau", "Sopa", "Caldo verde",
-    "Feijão tropeiro", "Virado à paulista", "Dobradinha", "Polenta"
+    "Feijão tropeiro", "Virado à paulista", "Dobradinha", "Polenta", "Lamen","Taco"
 ]
 
 p_paises = [
@@ -60,7 +65,7 @@ p_paises = [
     "Arábia Saudita", "Emirados Árabes Unidos", "Israel", "Turquia", "Irã", "Iraque", "Síria", "Jordânia", "Líbano",
     "Catar",
     "Kuwait", "Omã", "Iêmen","Mongólia",
-    "Cazaquistão", "Uzbequistão", "Turcomenistão", "Quirguistão", "Tajiquistão"
+    "Cazaquistão", "Uzbequistão", "Turcomenistão", "Quirguistão", "Tajiquistão","Angola","Sérvia","Andorra"
 ]
 
 p_objeto = [
@@ -80,6 +85,13 @@ p_objeto = [
     "Bateria"
 ]
 
+
+a1 = len(p_animal)
+c1 = len(p_comida)
+p1 = len(p_paises)
+o1 = len(p_objeto)
+
+## ANIMAIS
 mamiferos = [
     "Leão", "Tigre", "Elefante", "Girafa", "Zebra", "Cavalo", "Vaca", "Boi",
     "Ovelha", "Cabra", "Cachorro", "Gato", "Coelho", "Rato", "Camundongo",
@@ -108,7 +120,7 @@ anfibios = [
 marinhos = [
     "Tubarão", "Peixe-palhaço", "Tilápia", "Salmão", "Atum", "Sardinha",
     "Polvo", "Lula", "Caranguejo", "Lagosta", "Camarão", "Água-viva",
-    "Estrela-do-mar", "Cavalo-marinho"
+    "Estrela-do-mar", "Cavalo-marinho","Axolote"
 ]
 
 insetos = [
@@ -116,6 +128,8 @@ insetos = [
     "Formiga", "Abelha", "Vespa", "Gafanhoto"
 ]
 
+
+## COMIDA
 pratos_principais = [
     "Lasanha", "Pizza", "Hambúrguer", "Cachorro-quente",
     "Sushi", "Sashimi", "Temaki", "Yakissoba",
@@ -125,7 +139,7 @@ pratos_principais = [
     "Sopa", "Caldo verde",
     "Feijão tropeiro", "Virado à paulista",
     "Dobradinha",
-    "Salada", "Salada Caesar", "Batata frita"
+    "Salada", "Salada Caesar", "Batata frita", "Lamen","Macarrão"
 ]
 
 frutas = [
@@ -138,7 +152,7 @@ frutas = [
 lanches = [
     "Sanduíche", "Pastel", "Coxinha",
     "Empada", "Empadão", "Esfiha",
-    "Torta salgada"
+    "Torta salgada", "Taco"
 ]
 
 doces = [
@@ -151,6 +165,8 @@ doces = [
     "Arroz doce", "Mingau"
 ]
 
+
+## PAISES
 america_sul = [
     "Brasil", "Argentina", "Chile", "Uruguai", "Paraguai",
     "Bolívia", "Peru", "Colômbia", "Venezuela", "Equador",
@@ -173,7 +189,7 @@ europa = [
     "Áustria", "Polônia", "República Tcheca", "Eslováquia",
     "Hungria", "Romênia", "Bulgária", "Grécia",
     "Noruega", "Suécia", "Finlândia", "Dinamarca",
-    "Islândia", "Rússia", "Ucrânia"
+    "Islândia", "Rússia", "Ucrânia","Sérvia","Andorra"
 ]
 
 asia = [
@@ -191,14 +207,14 @@ asia = [
 africa = [
     "África do Sul", "Egito", "Nigéria", "Quênia",
     "Etiópia", "Marrocos", "Argélia", "Tunísia",
-    "Gana", "Camarões"
+    "Gana", "Camarões","Angola"
 ]
 
 oceania = [
     "Austrália", "Nova Zelândia"
 ]
 
-
+## OBJETOS
 sala = [
     "Sofá", "Poltrona", "Mesa", "Cadeira",
     "Estante", "Televisão", "Controle",
@@ -238,14 +254,14 @@ escritorio = [
     "Lápis", "Caneta", "Borracha", "Apontador",
     "Caderno", "Livro", "Agenda",
     "Marcador", "Régua", "Estojo",
-    "Computador", "Notebook", "Teclado",
+    "Notebook", "Teclado",
     "Mouse", "Monitor", "Impressora",
-    "Tablet", "Celular", "Carregador"
+    "Tablet", "Carregador"
 ]
 
 tecnologia = [
     "Fone de ouvido", "Caixa de som",
-    "Câmera", "Tripé", "Drone",
+    "Câmera", "Tripé", "Drone","Celular","Computador",
     "Pendrive", "HD",
     "Roteador", "Modem",
     "Interruptor", "Tomada", "Extensão",
@@ -286,24 +302,47 @@ def selecionar_tema(tema):
         p1 = randint(1, 100) - 1
         return p_animal[p1]
     elif tema == "COMIDA":
-        p1 = randint(1, 96) - 1
+        p1 = randint(1, 100) - 1
         return p_comida[p1]
     elif tema == "PAIS":
-        p1 = randint(1, 99) - 1
+        p1 = randint(1, 100) - 1
         return p_paises[p1]
     elif tema == "OBJETO":
-        p1 = randint(1, 98) - 1
+        p1 = randint(1, 100) - 1
         return p_objeto[p1]
+
+def selecionar_palavra(tema,p1):
+    tema = tema.upper()
+    if tema == "ANIMAL":
+        return v_a1.append(p1)
+    elif tema == "COMIDA":
+        return v_a1.append(p1)
+    elif tema == "PAIS":
+        return v_a1.append(p1)
+    elif tema == "OBJETO":
+        return v_a1.append(p1)
 
 # Escolha de Tema
 def escolher_tema():
     while True:
         print(f'{negrito()}')
         print('')
-        print(f'[1] {f_vermelho()}Animais{f_reset()}')
-        print(f'[2] {f_verde()}Comida{f_reset()}')
-        print(f'[3] {f_amarelo()}Paises{f_reset()}')
-        print(f'[4] {f_ciano()}Objeto{f_reset()}')
+        if len(v_a1) == 100:
+            print('')
+        else:
+            print(f'[1] {f_vermelho()}Animais{f_reset()} [{v_a1}/100]')
+        if len(v_c1) == 100:
+            print('')
+        else:
+            print(f'[2] {f_verde()}Comida{f_reset()} [{v_c1}/100]')
+        if len(v_p1) == 100:
+            print('')
+        else:
+            print(f'[3] {f_amarelo()}Paises{f_reset()} [{v_p1}/100]')
+        if len(v_o1) == 100:
+            print('')
+        else:
+            print(f'[4] {f_ciano()}Objeto{f_reset()} [{v_o1}/100]')
         print('')
         esc1 = input_int('> ')
         new_esc = esc1 - 1
@@ -314,6 +353,15 @@ def escolher_tema():
             return t1, palavra1
         else:
             pass
+
+def escolher_palavra():
+    while True:
+        global te1, palav1, ve_palavras
+        palav1 = selecionar_tema(te1)
+        if palav1 in ve_palavras:
+            pass
+        else:
+            return palav1
 
 # Definir Tipo
 def definir_tipo(pala1):
@@ -513,8 +561,51 @@ def atualizar_jogo(pa1, pa_jogo, l1):
 
     return vitoria
 
-w1 = introduzir()
+def prossegir():
+    while True:
+        global ve_palavras
+        print(f'{negrito()}')
+        print(f'''  
+  ░██████   ░██                 ░██                             ░██                                                 
+ ░██   ░██  ░██                                                 ░██                                                 
+░██     ░██ ░████████  ░██░████ ░██ ░████████  ░██████    ░████████  ░███████     ░████████   ░███████  ░██░████    
+░██     ░██ ░██    ░██ ░███     ░██░██    ░██       ░██  ░██    ░██ ░██    ░██    ░██    ░██ ░██    ░██ ░███        
+░██     ░██ ░██    ░██ ░██      ░██░██    ░██  ░███████  ░██    ░██ ░██    ░██    ░██    ░██ ░██    ░██ ░██         
+ ░██   ░██  ░███   ░██ ░██      ░██░██   ░███ ░██   ░██  ░██   ░███ ░██    ░██    ░███   ░██ ░██    ░██ ░██         
+  ░██████   ░██░█████  ░██      ░██ ░█████░██  ░█████░██  ░█████░██  ░███████     ░██░█████   ░███████  ░██         
+                                          ░██                                     ░██                               
+                                    ░███████                                      ░██                               
+                                                                                                                    
+                                   ░██                                                                              
+                                                                                                                    
+                                   ░██  ░███████   ░████████  ░██████   ░██░████                                    
+                                   ░██ ░██    ░██ ░██    ░██       ░██  ░███                                        
+                                   ░██ ░██    ░██ ░██    ░██  ░███████  ░██                                         
+                                   ░██ ░██    ░██ ░██   ░███ ░██   ░██  ░██                                         
+                                   ░██  ░███████   ░█████░██  ░█████░██ ░██                                         
+                                   ░██                   ░██                                                        
+                                 ░███              ░███████                                                         
+                                                                                                                                                      
+                                                                                  ''')
+        print('')
+        print(f"{negrito()}")
+        print(f"Deseja Reiniciar? [{f_verde()}S{f_reset()}/{f_vermelho()}N{f_reset()}]")
+        print("")
+        ex1 = input_str("> ").upper()
+        print("")
+        if ex1 == "S" or ex1 == "SI" or ex1 == "SIM":
+            ve_palavras.clear()
+            print("Ok Selecionando outro Numero...")
+            print('')
+            espaco()
+            return True
+        elif ex1 == "N" or ex1 == "NA" or ex1 == "NÃ" or ex1 == "NAO" or ex1 == "NÃO":
+            print('Saindo do Jogo...')
+            return False
+        else:
+            pass
 
+w1 = introduzir()
 if w1 == True:
     te1, palav1 = escolher_tema()
     l_pa1 = list(palav1)
@@ -532,6 +623,29 @@ if w1 == True:
 
 while w1:
     print(f'{negrito()}')
+    if len(ve_palavras) == 400:
+        print('flamingo')
+        w1 = prossegir()
+        if w1 == True:
+            te1, palav1 = escolher_tema()
+            if not palav1 in ve_palavras:
+                ve_palavras.append(palav1)
+            else:
+                palav1 = escolher_palavra()
+                ve_palavras.append(palav1)
+            l_pa1 = list(palav1)
+            l_jogo = []
+            c_e1 = 0
+            for i in range(len(l_pa1)):
+                if l_pa1[i] == '-':
+                    l_jogo.append('-')
+                elif l_pa1[i] == ' ':
+                    l_jogo.append('-')
+                else:
+                    l_jogo.append('__')
+            tip1 = definir_tipo(palav1)
+            l_caracteres = []
+
     if c_e1 >= 7:
         print(enforcar(c_e1))
         print("")
@@ -555,6 +669,13 @@ while w1:
         verific = False
         if w1 == True:
             te1, palav1 = escolher_tema()
+            if not palav1 in ve_palavras:
+                ve_palavras.append(palav1)
+                selecionar_palavra(te1, palav1)
+            else:
+                palav1 = escolher_palavra()
+                ve_palavras.append(palav1)
+                selecionar_palavra(te1, palav1)
             l_pa1 = list(palav1)
             l_jogo = []
             c_e1 = 0
@@ -570,6 +691,7 @@ while w1:
 
     if w1 == True:
         print("")
+        l_caracteres.sort()
         print(f"Tema: {te1}")
         print(f"Tipo: {tip1}")
         print('Letras já selecionadas:',*[i for i in l_caracteres])
