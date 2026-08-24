@@ -81,7 +81,8 @@ def pedir_carta(e1):
         lista_jc1.append(c_carta)
         lista_c1.append(c_carta_1)
 
-def parar():
+def parar():1
+
     soma_p = sum(lista_jp1)
     soma_c = sum(lista_jc1)
     print(f"Player: {soma_p}")
