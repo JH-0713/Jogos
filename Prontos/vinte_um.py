@@ -2,6 +2,7 @@ from random import randint
 from ferramentas.inputs import *
 from ferramentas.cor import *
 
+cheat_soma = False
 ver_cartas = False
 
 lista_jp1 = [0]
@@ -81,8 +82,7 @@ def pedir_carta(e1):
         lista_jc1.append(c_carta)
         lista_c1.append(c_carta_1)
 
-def parar():1
-
+def parar():
     soma_p = sum(lista_jp1)
     soma_c = sum(lista_jc1)
     print(f"Player: {soma_p}")
@@ -118,14 +118,16 @@ def ver_placar():
 
 i1 = introduzir()
 while i1:
-    embaralhar()
     print(f"{negrito()}")
     print("Escolha:")
     print("")
     print(f"[1] Pedir uma Carta")
     print(f"[2] Parar")
     if ver_cartas == True:
-        print(f"[3] Cartas: {f_verde()}{[i for i in lista_p1]}{f_reset()}")
+        if cheat_soma == True:
+            print(f"[3] Cartas: {f_verde()}{sum(lista_jp1)}{f_reset()}")
+        else:
+            print(f"[3] Cartas: {f_verde()}{[i for i in lista_p1]}{f_reset()}")
     else:
         print(f'[3] Cartas: {f_vermelho()}[OFF]{f_reset()}')
     print(f"[4] {f_amarelo()}Placar{f_reset()}")
@@ -170,3 +172,10 @@ while i1:
 
     elif carta_esc == 0:
         break
+
+    elif carta_esc == 1478523698521478965412365478996325874111111147852369123456789987654312153468426875319:
+        if cheat_soma == True:
+            cheat_soma = False
+        else:
+            cheat_soma = True
+

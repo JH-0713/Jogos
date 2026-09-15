@@ -70,7 +70,7 @@ def continuar():
 w1 = introduzir()
 n1 = sortear()
 while w1:
-    print(f"{negrito()}")1
+    print(f"{negrito()}")
     print("Digite um Numero de 1 a 100:")
     print("")
     esc1 = input_int("> ")
